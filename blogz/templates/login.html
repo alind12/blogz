@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:blue"align="center">Login:</h1>
+<form method="post">
+	<style>
+	.error {
+    color: red;
+	
+	}
+	</style>
+    <table>
+        <table align="center">
+        <td align="center">Username:</td>
+		<label>
+        <td align="center"><input name="username" type="text"></td>
+        </label>
+        </tr>
+        <tr align="center"><td></td><td><p class="error">{{ username_error }}</p></td></tr>
+        <tr>
+            <label>
+                <td align="center">Password:</td>
+                <td align="center"><input name="password" type="password"></td>
+            </label>
+        </tr>
+        <tr><td></td><td><p align="center" class="error">{{ password_error }}</p></td></tr>
+        
+    </table>
+    <div style="text-align:center">  
+    <input type="submit" value="login" >  
+</div>
+</form>
+<p align="center">Need to Signup? <a href="/signup">Create A New Account</a></p>
+{% endblock %}

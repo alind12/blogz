@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:blue"align="center">{{ blog.title }}</h1>
+<p>{{ blog.body }}</p>
+{% for user in users %}
+    {% if blog.owner_id == user.id  %}
+        <p style="font-size: small">Made by <a href="/blog?user_id={{blog.owner_id}}">{{ user.username }}</a></p>
+    {% endif %}
+ {% endfor %}
+{% endblock %}
